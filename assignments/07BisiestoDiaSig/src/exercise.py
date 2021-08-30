@@ -1,6 +1,6 @@
 def main():
     #escribe tu código abajo de esta línea
-    y = int(input("Año: "))
+    yy = int(input("Año: "))
     m = int(input("Mes: "))
     d = int(input("Día: "))
     # Meses con 31 dias: 1, 3, 5, 7, 8, 10, 12
@@ -9,7 +9,7 @@ def main():
             d = 1
             if m == 12:
                 m = 1
-                y = y + 1
+                yy = yy + 1
             else:
                 m = m + 1
         else:
@@ -23,18 +23,18 @@ def main():
             d = d + 1
     # Mes 2 puede tener 28 o 29 dias
     else:
-        if d == 29 and y % 4 == 0 and y % 100 != 0 or y % 400 == 0:
+        if d == 29 and yy % 4 == 0 and yy % 100 != 0 or yy % 400 == 0:
             d = 1
             m = m + 1
         elif d == 28:
-            if y % 4 == 0 and y % 100 != 0 or y % 400 == 0:
+            if yy % 4 == 0 and yy % 100 != 0 or yy % 400 == 0:
                 d = d + 1
             else:
                 d = 1
                 m = m + 1
         else:
             d = d + 1
-    print(y)
+    print(yy)
     print(m)
     print(d)
 
